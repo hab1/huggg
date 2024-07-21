@@ -5,7 +5,7 @@ module.exports = {
     testMatch: ['**/?(*.)+(spec|test).[tj]s?(x)'],
     collectCoverage: true,
     coverageDirectory: 'coverage',
-    coverageReporters: ['html', 'text'],
+    coverageReporters: ['json', 'lcov', 'text', 'clover', 'html'],
     testPathIgnorePatterns: [
         '/node_modules',
         '/utils',
