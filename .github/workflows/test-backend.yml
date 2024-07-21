@@ -35,6 +35,11 @@ jobs:
         cd backend
         npm run test
 
+    - name: Display coverage directory contents
+      run: |
+        cd backend
+        ls -R coverage
+
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1
       with:
