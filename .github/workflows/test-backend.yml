@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  Backend unit test:
+  backend-unit-test:
     runs-on: ubuntu-latest
 
     steps:
