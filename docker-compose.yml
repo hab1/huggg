@@ -1,0 +1,29 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    container_name: frontend
+    ports:
+      - "3000:80"
+    networks:
+      - huggg_network
+  backend:
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    container_name: backend
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./src:/usr/src/app/src
+      - /usr/src/app/node_modules
+    environment:
+      - PORT=3001
+      - NODE_ENV=development
+    networks:
+      - huggg_network
+
+networks:
+  huggg_network:
+    driver: bridge

@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "huggg backend service",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "Javier B",
+  "license": "ISC",
+  "dependencies": {
+    "@sinclair/typebox": "^0.32.34",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "ts-node": "^10.9.2",
+    "typebox": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.11",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.3",
+    "typescript": "^5.5.3"
+  }
+}
