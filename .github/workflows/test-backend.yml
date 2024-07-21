@@ -39,5 +39,6 @@ jobs:
       uses: codecov/codecov-action@v4.0.1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        directory: ./coverage/
+        files: ./backend/coverage/*.json,./backend/coverage/lcov.info,./backend/coverage/clover.xml
         flags: backend
+        fail_ci_if_error: true
