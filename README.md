@@ -36,6 +36,51 @@
    - **Backend:** Load the backend service in your browser or API client via [http://localhost:3001](http://localhost:3001).
    - **Frontend:** Load the frontend service in your browser via [http://localhost:3000](http://localhost:3000).
 
+## API Routes
+
+The backend service provides the following API routes:
+
+- **Route to get all brands data:**
+
+  ```http
+  GET /brands
+  ```
+
+  **Description:** Retrieves a list of all brands.
+
+- **Route to get a brand by ID:**
+
+  ```http
+  GET /brands/:id
+  ```
+
+  **Description:** Retrieves a specific brand by its ID.
+
+- **Route to get products by brand ID:**
+
+  ```http
+  GET /brands/:id/products
+  ```
+
+  **Description:** Retrieves a list of products associated with a specific brand ID.
+  
+- **Route to get stores by brand ID:**
+
+  ```http
+  GET /brands/:id/stores
+  ```
+
+  **Description:** Retrieves a list of stores associated with a specific brand ID.
+  
+
+- **Route to get stores by product ID:**
+
+  ```http
+  GET /products/:productId/stores
+  ```
+
+  **Description:** Retrieves a list of stores associated with a specific product ID.
+
 ## Stopping the Service
 
 To stop the running Docker containers, use the following command:
@@ -54,3 +99,4 @@ This will stop and remove the containers defined in the `docker-compose.yml` fil
 
 - **Frontend:**
   - Library: React.js
+
